@@ -1,33 +1,81 @@
-<p>
-    <mat-form-field appearance="legacy">
-      <mat-label>Legacy form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
+
+<form [formGroup]="form" class="example-form">
+<!-- Nome e telefone input-->
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" name="nome" placeholder="Nome" formControlName="name"> 
     </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="standard">
-      <mat-label>Standard form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
+  </td>
+    <td>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input matInput type="phone" name="telefone" placeholder="Telefone" placeholder="Nome" formControlName="phone"> 
     </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="fill">
-      <mat-label>Fill form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
+  </td>
+  </tr>
+</table>
+<!--CPF E UF-->
+<table class="example-full-width" cellspacing="0">
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>CPF</mat-label>
+      <input matInput type="number" name="nome" placeholder="CPF" formControlName="cpf"> 
     </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field appearance="outline">
-      <mat-label>Outline form field</mat-label>
-      <input matInput placeholder="Placeholder">
-      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-      <mat-hint>Hint</mat-hint>
+  </td>
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>UF</mat-label>
+      <input matInput type="text" name="nome" placeholder="UF" formControlName="uf"> 
     </mat-form-field>
-  </p>
-  
+  </td>
+</table>
+<!-- #region -->
+<table class="example-full-width" cellspacing="0">
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Rua</mat-label>
+      <input matInput type="text" name="nome" placeholder="Rua" formControlName="street">
+    </mat-form-field>
+  </td>
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>CEP</mat-label>
+      <input matInput type="text" name="nome" placeholder="CEP" formControlName="cep">
+    </mat-form-field>
+  </td>
+</table>
+
+<table class="example-full-width" cellspacing="0">
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Cidade</mat-label>
+      <input matInput type="text" name="nome" placeholder="Cidade" formControlName="city">
+    </mat-form-field>
+  </td>
+  <td>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Complemento</mat-label>
+      <input matInput type="text" name="nome" placeholder="Complemento" formControlName="complement"> 
+    </mat-form-field>
+  </td>
+</table>
+<table>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>
+      Número do produto 
+    </mat-label>
+    <input matInput type="text" name="number" placeholder="Número do produto" formControlName="products_id">
+  </mat-form-field>
+</table>
+</form>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="war" (click)="saveUser()">
+      Save
+  </button>
+  <button mat-raised-button mat-dialog-close  color="warn">
+    Close
+  </button>
+</div>

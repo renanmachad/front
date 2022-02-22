@@ -7,6 +7,11 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { PopUpComponent } from './pop-up/pop-up.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,6 +23,9 @@ import { PopUpComponent } from './pop-up/pop-up.component';
     NoopAnimationsModule,
     MatDialogModule,
     MatFormFieldModule,
+    FormsModule, ReactiveFormsModule,
+    MatInputModule,
+    MatButtonModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
