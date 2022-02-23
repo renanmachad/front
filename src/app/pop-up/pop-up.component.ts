@@ -42,7 +42,7 @@ export class PopUpComponent implements OnInit {
   }
 
   saveUser(){
-    //this.http.post<any>('http:127.0.0.1:8000/users/register', this.form.value).subscribe(data => {console.log(data)})
+    
     this.data = this.form.value;
 
     this.userPost.createUser(this.data).subscribe((data: any)=> {
