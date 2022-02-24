@@ -13,16 +13,26 @@ export class AppComponent implements OnInit{
   title = 'front';
   
   users:Users[];
-  
+  displayedColumns=['id','name','cpf'];
 
   constructor(private dialogRef: MatDialog, private api:service){
   }
 
   ngOnInit(){
-    this.api.listUsers()
-    .subscribe(name =>this.users=name);
-    console.log(this.users);
+    this.getUsers();
+
   }
+
+  getUsers(){
+    this.api.listUsers()
+    .subscribe(data => {
+      
+      this.users=data;
+      console.log(this.users);
+    });
+  }
+
+
   openDialog(){
     this.dialogRef.open(PopUpComponent);
   }
