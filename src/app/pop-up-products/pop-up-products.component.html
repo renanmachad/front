@@ -1,0 +1,44 @@
+
+<form [formGroup]="form" class="example-form">
+    <!-- Nome e telefone input-->
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Nome</mat-label>
+            <input matInput type="text" name="nome" placeholder="Nome" formControlName="name"> 
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>Código do produto</mat-label>
+            <input matInput type="phone" name="telefone" placeholder="Código" placeholder="Nome" formControlName="code"> 
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+    <!--CPF E UF-->
+    <table class="example-full-width" cellspacing="0">
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Preço</mat-label>
+          <input matInput type="number" name="nome" placeholder="Preço" formControlName="price"> 
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Id do usuário</mat-label>
+          <input matInput type="text" name="nome" placeholder="Id do usuário" formControlName="user_id"> 
+        </mat-form-field>
+      </td>
+    </table>
+    <!-- #region -->
+    
+    <div mat-dialog-actions [align]="'end'">
+      <button mat-raised-button color="war" (click)="saveProduct()">
+          Save
+      </button>
+      <button mat-raised-button mat-dialog-close  color="warn">
+        Close
+      </button>
+    </div>

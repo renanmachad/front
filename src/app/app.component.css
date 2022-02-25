@@ -5,6 +5,30 @@
 .mat-elevation-z8 td{
     padding: 1rem;
 }
-.table{
+.mytable{
     padding-top:5rem;
+}
+
+table{
+    width: 100%;
+}
+mat-table{
+    width: 100%;
+}
+
+.mat-form-field{
+    font-size:14px;
+    width: 100%;
+}
+td, th {
+    width: 25%;
+}
+
+button{
+    margin: 0 8px 8px 0px;
+}
+
+.example-button-row{
+    padding-top:1rem;
+    margin-top: 1rem;
 }

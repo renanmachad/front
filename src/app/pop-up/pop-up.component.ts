@@ -1,4 +1,4 @@
-import { UserService } from './../service/user-data.service';
+
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators, NgForm, FormGroupDirective, AbstractControl, FormGroup, FormBuilder } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
@@ -46,7 +46,7 @@ export class PopUpComponent implements OnInit {
     this.data = this.form.value;
 
     this.userPost.createUser(this.data).subscribe((data: any)=> {
-      console.warn(data);
+      console.log(data);
     })
     console.log(this.form.value);
   }

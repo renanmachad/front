@@ -16,10 +16,18 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EditComponent } from './edit/edit.component';
+import { MatIconModule } from '@angular/material/icon';
+import { PopUpProductsComponent } from './pop-up-products/pop-up-products.component';
+import { ModalProductComponent } from './modal-product/modal-product.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PopUpComponent
+    PopUpComponent,
+    EditComponent,
+    PopUpProductsComponent,
+    ModalProductComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +42,9 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     MatSelectModule,
     MatTableModule,
     MatSortModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    NgbModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
